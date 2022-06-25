@@ -392,7 +392,7 @@ footer {
 }
 .cardProduct {
     width: 1024px;
-    height: 750px;
+    height: 600px;
     position: relative;
     background-color: white;
     display: flex;
@@ -402,8 +402,8 @@ footer {
     padding: 90px;
 }
 .cardProduct .image{
-    width: 412px;
-    height: 538px;
+    width: 410px;
+    height: 450px;
 }
 .cardProduct .image img{
     width: 100%;
@@ -568,6 +568,8 @@ footer {
 }
 .bucket .productsList #items .item .itemName {
     margin-left: 46px;
+    width: 180px;
+    text-align: center;
 }
 .bucket .productsList #items .item .itemSize {
     margin-left: 140px;
@@ -622,7 +624,7 @@ footer {
     margin-left: 210px;
 }
 .third {
-    margin-left: 70px;
+    margin-left: 83px;
 }
 .fourth {
     margin-left: 86px;

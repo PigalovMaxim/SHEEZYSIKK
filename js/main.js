@@ -4,24 +4,28 @@ const tees = [
     name: "Mom elly tee",
     price: "2 490₽",
     oldPrice: null,
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/SocialHelpTee.png",
     name: "SOCIAL HELP TEE",
     price: "1 990₽",
     oldPrice: "2 400₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/SocialConceptTee.png",
     name: "SOCIAL CONCEPT TEE",
     price: "1 990₽",
     oldPrice: "2 400₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/CapsuleCheapTee.png",
     name: 'CAPSULE "CHEAP" TEE',
     price: "1 720₽",
     oldPrice: null,
+    art: Math.round(Math.random() * 8999 + 1000)
   },
 ];
 const hoodies = [
@@ -30,18 +34,21 @@ const hoodies = [
     name: "WW CAPSULE HOODIE",
     price: "4 600₽",
     oldPrice: null,
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/HoldMyHand.png",
     name: "HOLD MY HAND CREWNECK",
     price: "4 600₽",
     oldPrice: "5 900₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/CovidLogoHoodie.png",
     name: "SOCIAL CONCEPT TEE",
     price: "5 590₽",
     oldPrice: "6 700₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
 ];
 const pants = [
@@ -50,18 +57,21 @@ const pants = [
     name: "CAPSULE BLACK PANTS",
     price: "4 600₽",
     oldPrice: null,
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/PantsMomElly.png",
     name: "PANTS MOM ELLY",
     price: "6 590₽",
     oldPrice: "8 000₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/PantsRedBlood.png",
     name: "PANTS RED BLOOD",
     price: "3 590₽",
     oldPrice: "4 400₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
 ];
 const accessories = [
@@ -70,47 +80,122 @@ const accessories = [
     name: "Scarf",
     price: "3 590₽",
     oldPrice: "4 400₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/Hood.png",
     name: "hood",
     price: "2 890₽",
     oldPrice: "3 500₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/EarflapMask.png",
     name: "EARFLAP MASK BLACK HOLE",
     price: "3 590₽",
     oldPrice: "4 000₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
   {
     img: "./imgs/Sleeves.png",
     name: "sleeves",
     price: "3 590₽",
     oldPrice: "1 700₽",
+    art: Math.round(Math.random() * 8999 + 1000)
   },
 ];
+const bucketContent = [];
+let choosenSize = 'M';
 
 const sizesBtns = document.querySelectorAll('.size');
 sizesBtns.forEach((value, index) => {
     value.addEventListener('click', () => {
         for(let i = 0; i < sizesBtns.length; i++) {
             sizesBtns[i].classList.remove('active');
-            if(i === index) sizesBtns[i].classList.add('active');
+            if(i === index) {
+                sizesBtns[i].classList.add('active');
+                choosenSize = sizesBtns[i].innerHTML;
+            }
         }
     })
 });
 
 document.getElementById('hideProductCard').addEventListener('click', () => {
-    document.getElementById('wrapperProduct').classList.add('hidden');bucketWindow
+    document.getElementById('wrapperProduct').classList.add('hidden');
 });
 document.getElementById('continuePurchase').addEventListener('click', () => {
     document.getElementById('bucketWindow').classList.add('hidden');
 });
 document.getElementById('bucketBtn').addEventListener('click', () => {
     document.getElementById('bucketWindow').classList.remove('hidden');
+    drawItems();
 });
-
+function drawItems() {
+    const items = document.getElementById('items');
+    console.log(bucketContent);
+    items.innerHTML = '';
+    let purcahsesSum = 0;
+    bucketContent.forEach((value, index) => {
+        const item = document.createElement('div');
+        item.classList.add('item');
+        const img = document.createElement('img');
+        img.setAttribute('src', value.img);
+        item.appendChild(img);
+        const name = document.createElement('label');
+        name.classList.add('itemName');
+        name.innerHTML = value.name;
+        item.appendChild(name);
+        const size = document.createElement('label');
+        size.classList.add('itemSize');
+        size.innerHTML = value.choosenSize;
+        item.appendChild(size);
+        const art = document.createElement('label');
+        art.classList.add('itemArt');
+        art.innerHTML = value.art;
+        item.appendChild(art);
+        const sum = document.createElement('label');
+        sum.classList.add('itemSum');
+        sum.innerHTML = parseInt(value.price.replace(/\D+/g,"")) * value.count + '₽';
+        purcahsesSum += parseInt(value.price.replace(/\D+/g,"")) * value.count;
+        const count = document.createElement('div');
+        count.classList.add('itemCount');
+        const btnMinus = document.createElement('button');
+        btnMinus.setAttribute('id', 'controlsBtnMinus');
+        count.appendChild(btnMinus);
+        const countNum = document.createElement('span');
+        countNum.classList.add('count');
+        countNum.innerHTML = value.count;
+        count.appendChild(countNum);
+        const btnPlus = document.createElement('button');
+        btnPlus.setAttribute('id', 'controlsBtnPlus');
+        btnPlus.addEventListener('click', () => {
+            const currNum = parseInt(countNum.innerHTML);
+            countNum.innerHTML = currNum + 1;
+            value.count = currNum + 1;
+            document.getElementById('itemsSumNumber').innerHTML = 
+                parseInt(
+                    document.getElementById('itemsSumNumber').innerHTML.replace(/\D+/g,"")
+                ) + parseInt(
+                    value.price.replace(/\D+/g,"")
+                ) + '₽';
+            sum.innerHTML = parseInt(value.price.replace(/\D+/g,"")) * value.count + '₽';
+            
+        });
+        count.appendChild(btnPlus);
+        item.appendChild(count);
+        item.appendChild(sum);
+        const btnCross = document.createElement('button');
+        btnCross.setAttribute('id', 'controlsBtnCross');
+        btnCross.addEventListener('click', () => {
+            bucketContent.splice(index, 1);
+            drawItems();
+        });
+        item.appendChild(btnCross);
+        items.appendChild(item);
+    });
+    document.getElementById('itemsCountNumber').innerHTML = bucketContent.length;
+    document.getElementById('itemsSumNumber').innerHTML = purcahsesSum + '₽';
+}
 function loadProducts() {
   const teeRow = document.getElementById("teeProducts");
   const hoodieRow = document.getElementById("hoodieProducts");
@@ -151,6 +236,18 @@ function linkItemToInfo(item) {
     document.getElementById('productImg').setAttribute('src', item.img);
     document.getElementById('productName').innerHTML = item.name;
     document.getElementById('productPrice').innerHTML = item.price;
+    document.getElementById('addProduct').remove();
+    const btn = document.createElement('button');
+    btn.setAttribute('id', 'addProduct');
+    btn.innerHTML = 'Добавить в корзину';
+    const wrapper = document.getElementById('wrapperId');
+    wrapper.appendChild(btn);
+    document.getElementById('addProduct').addEventListener('click', () => {
+        bucketContent.push({...item, count: 1, choosenSize});
+        document.getElementById('bucketWindow').classList.remove('hidden');
+        document.getElementById('wrapperProduct').classList.add('hidden');
+        drawItems();
+    });
 }
 
 loadProducts();
