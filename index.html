@@ -11,10 +11,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="wrapperProduct" class="hidden">
+        <div class="cardProduct">
+            <div class="image">
+                <img id="productImg" src="./imgs/CovidLogoHoodie.png"/>
+            </div>
+            <div class="infoWrapper">
+                <div class="titles">
+                    <label id="productName" class="title">WW CAPSULE HOODIE</label>
+                    <label id="productPrice" class="price">4 600₽</label>
+                </div>
+                <div class="productInfo">
+                    <label class="name">Размеры:</label>
+                    <div class="sizes">
+                        <button class="size">XS</button>
+                        <button class="size">S</button>
+                        <button class="size active">M</button>
+                        <button class="size">L</button>
+                        <button class="size">XL</button>
+                    </div> 
+                    <label class="name">Описание:</label>
+                    <div class="desc">
+                        100% хлопок
+                        Прямая печать
+                    </div> 
+                </div>
+                <button id="addProduct">Добавить в корзину</button>
+            </div>
+            <button id="hideProductCard">
+                <img src="./imgs/Cross.png"/>
+            </button>
+        </div>
+    </div>
     <div class="logo">
         <img src="./imgs/Logo.png"/>
     </div>
-    <img class="bucket" src="./imgs/Bucket.png"/>
+    <div class="bucket">
+        <img src="./imgs/Bucket.png"/>
+    </div>
     <div class="wrapper">
         <header>
             <a class="pmenu" href="classic.html#Aboutus">О нас</a>
@@ -55,103 +89,19 @@
         <div class="products">
             <div class="productsType">
                 <label class="title">Футболки</label>
-                <div class="productsRow">
-                    <div class="productCard">
-                        <img src="./imgs/MomEllyTee.png"/>
-                        <label class="productName">Mom elly tee</label>
-                        <label class="productPrice">2 490₽</label>
-                    </div>
-                    <div class="productCard">
-                        <img src="./imgs/SocialHelpTee.png"/>
-                        <label class="productName">SOCIAL HELP TEE</label>
-                        <label class="productPrice">1 990₽</label>
-                        <label class="productOldPrice">2 400₽</label> 
-                    </div>
-                    <div class="productCard">
-                        <img src="./imgs/SocialConceptTee.png"/>
-                        <label class="productName">SOCIAL CONCEPT TEE</label>
-                        <label class="productPrice">1 990₽</label>
-                        <label class="productOldPrice">2 400₽</label>
-                    </div>
-                    <div class="productCard">
-                        <img src="./imgs/CapsuleCheapTee.png"/>
-                        <label class="productName">CAPSULE "CHEAP" TEE</label>
-                        <label class="productPrice">1 720₽</label>
-                    </div>
-                </div>
+                <div id="teeProducts" class="productsRow"></div>
             </div>
             <div class="productsType">
                 <label class="title">Худи</label>
-                <div class="productsRow">
-                    <div class="productCard hoodie">
-                        <img src="./imgs/WwCapsuleHoodie.png"/>
-                        <label class="productName">WW CAPSULE HOODIE</label>
-                        <label class="productPrice">4 600₽</label>
-                    </div>
-                    <div class="productCard hoodie">
-                        <img src="./imgs/HoldMyHand.png"/>
-                        <label class="productName">HOLD MY HAND CREWNECK</label>
-                        <label class="productPrice">4 600₽</label>
-                        <label class="productOldPrice">5 900₽</label>
-                    </div>
-                    <div class="productCard hoodie">
-                        <img src="./imgs/CovidLogoHoodie.png"/>
-                        <label class="productName">COVID LOGO HOODIE</label>
-                        <label class="productPrice">5 590₽</label>
-                        <label class="productOldPrice">6 700₽</label>
-                    </div>
-                </div>
+                <div id="hoodieProducts" class="productsRow"></div>
             </div>
             <div class="productsType">
                 <label class="title">Штаны</label>
-                <div class="productsRow">
-                    <div class="productCard pants">
-                        <img src="./imgs/CapsuleBlackPants.png"/>
-                        <label class="productName">CAPSULE BLACK PANTS</label>
-                        <label class="productPrice">4 600₽</label>
-                    </div>
-                    <div class="productCard pants">
-                        <img src="./imgs/PantsMomElly.png"/>
-                        <label class="productName">PANTS MOM ELLY</label>
-                        <label class="productPrice">6 590₽</label>
-                        <label class="productOldPrice">8 000₽</label>
-                    </div>
-                    <div class="productCard pants">
-                        <img src="./imgs/PantsRedBlood.png"/>
-                        <label class="productName">PANTS RED BLOOD</label>
-                        <label class="productPrice">3 590₽</label>
-                        <label class="productOldPrice">4 400₽</label>
-                    </div>
-                </div>
+                <div id="pantsProducts" class="productsRow"></div>
             </div>
             <div class="productsType">
                 <label class="title">Аксессуары</label>
-                <div class="productsRow">
-                    <div class="productCard accessories">
-                        <img src="./imgs/scarf.png"/>
-                        <label class="productName">Scarf</label>
-                        <label class="productPrice">3 590₽</label>
-                        <label class="productOldPrice">4 400₽</label>
-                    </div>
-                    <div class="productCard accessories">
-                        <img src="./imgs/Hood.png"/>
-                        <label class="productName">hood</label>
-                        <label class="productPrice">2 890₽</label>
-                        <label class="productOldPrice">3 500₽</label>
-                    </div>
-                    <div class="productCard accessories">
-                        <img src="./imgs/EarflapMask.png"/>
-                        <label class="productName">EARFLAP MASK BLACK HOLE</label>
-                        <label class="productPrice">3 590₽</label>
-                        <label class="productOldPrice">4 000₽</label>
-                    </div>
-                    <div class="productCard accessories">
-                        <img src="./imgs/Sleeves.png"/>
-                        <label class="productName">sleeves</label>
-                        <label class="productPrice">3 590₽</label>
-                        <label class="productOldPrice">1 700₽</label>
-                    </div>
-                </div>
+                <div id="accessoriesProducts" class="productsRow"></div>
             </div>
         </div>
         <label class="aboutUsTitle">О нас</label>
@@ -189,5 +139,6 @@
             <a class="footerLink">Обмен и возврат</a>
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>
