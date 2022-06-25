@@ -12,59 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="wrapperProduct" class="hidden">
-        <div class="cardProduct">
-            <div class="image">
-                <img id="productImg" src="./imgs/CovidLogoHoodie.png"/>
-            </div>
-            <div id="wrapperId" class="infoWrapper">
-                <div class="titles">
-                    <label id="productName" class="title">WW CAPSULE HOODIE</label>
-                    <label id="productPrice" class="price">4 600₽</label>
-                </div>
-                <div class="productInfo">
-                    <label class="name">Размеры:</label>
-                    <div class="sizes">
-                        <button class="size">XS</button>
-                        <button class="size">S</button>
-                        <button class="size active">M</button>
-                        <button class="size">L</button>
-                        <button class="size">XL</button>
-                    </div> 
-                    <label class="name">Описание:</label>
-                    <div class="desc">
-                        <div>100% хлопок</div>
-                        <div>Прямая печать</div>
-                    </div> 
-                </div>
-                <button id="addProduct">Добавить в корзину</button>
-            </div>
-            <button id="hideProductCard">
-                <img src="./imgs/Cross.png"/>
-            </button>
-        </div>
-    </div>
-    <div id="bucketWindow" class="bucket hidden">
-        <label class="title">Корзина</label>
-        <div class="productsList">
-            <div class="types">
-                <label class="type first">Название:</label>
-                <label class="type second">Размер:</label>
-                <label class="type third">Арт:</label>
-                <label class="type fourth">Кол - во:</label>
-                <label class="type fifth">Сумма:</label>
-            </div>
-            <div id="items"></div>
-            <div class="bucketInfo">
-                <div id="bucketCount">Всего товаров в корзине: <span id="itemsCountNumber" class="number">5</span></div>
-                <div id="bucketSum">Общая сумма: <span id="itemsSumNumber" class="number">16 160₽</span></div>
-            </div>
-           <div class="buttonsControls">
-                <button class="getPurchase">Перейти к оформлению заказа</button>
-                <button id="continuePurchase">Продолжить покупки</button>
-           </div>
-        </div>
-    </div>
     <div id="logo" class="logo">
         <img src="./imgs/Logo.png"/>
     </div>
@@ -72,74 +19,102 @@
         <img src="./imgs/Bucket.png"/>
         <div id="menuBucketItemsCount">0</div>
     </div>
-    <div class="wrapper">
-        <header>
-            <a class="pmenu" id="aboutUsBtn">О нас</a>
-            <a class="pmenu" href="deliver.html">Контакты</a>
-            <a class="pmenu" href="deliver.html">Доставка</a>
-            <div class="menu">
-                <label id="siteStyle">
-                    Внешний вид магазина
-                </label>
-                <div id="stylesMenu">
-                    <a class="styleOption">Строго и со вкусом</a>
-                    <a class="styleOption">Коротко и по делу</a>
-                    <a class="styleOption">Версия для слабовидящих</a>
+    <header>
+        <div class="mainMenu">
+            <div class="box">
+                <a class="pmenu" id="aboutUsBtn">О нас</a>
+                <a class="pmenu" href="deliver.html">Контакты</a>
+            </div>
+            <div class="box">
+                <a class="pmenu" href="deliver.html">Доставка</a>
+                <div class="menu">
+                    <label id="siteStyle">
+                        Внешний вид магазина
+                    </label>
+                    <div id="stylesMenu">
+                        <a href="#" class="styleOption">Строго и со вкусом</a>
+                        <a href="simple.html" class="styleOption">Коротко и по делу</a>
+                        <a class="styleOption">Версия для слабовидящих</a>
+                    </div>
                 </div>
             </div>
-        </header>
-        <div class="topScreen">
-            <img src="./imgs/MainScreenImg.png"/>
-            <div class="icons">
-                <a href="https://t.me/sheezysikk" class="link">
-                    <img src="./imgs/MainScreenTlg.png"/>
-                </a>
-                <a href="https://www.instagram.com/sheezysikk" class="link">
-                    <img src="./imgs/MainScreenInst.png"/>
-                </a>
-                <a href="https://vk.com/sheezysikk" class="link">
-                    <img src="./imgs/MainScreenVk.png"/>
-                </a> 
-            </div>
-            <div class="list">
-                <label class="title">Категории</label>
-                <label id="accessoriesLink" class="listItem">Аксессуары</label>
-                <label id="teesLink" class="listItem">Футболки</label>
-                <label id="pantsLink" class="listItem">Штаны</label>
-                <label id="hoodiesLink" class="listItem">Худи</label>
-            </div>
-        </div>     
-        <div class="products">
-            <div id="teesPoint" class="productsType">
-                <label class="title">Футболки</label>
-                <div id="teeProducts" class="productsRow"></div>
-            </div>
-            <div id="hoodiePoint" class="productsType">
-                <label class="title">Худи</label>
-                <div id="hoodieProducts" class="productsRow"></div>
-            </div>
-            <div id="pantsPoint" class="productsType">
-                <label class="title">Штаны</label>
-                <div id="pantsProducts" class="productsRow"></div>
-            </div>
-            <div id="accessoriesPoint" class="productsType">
-                <label class="title">Аксессуары</label>
-                <div id="accessoriesProducts" class="productsRow"></div>
-            </div>
         </div>
-        <label class="aboutUsTitle">О нас</label>
-        <div class="aboutUs" id="aboutUsPoint">
-            <div class="text">
-                <label class="name">SHEEZYSIKK</label>
-                <label class="mainText">Бренд одежды, вдохновленный собственным мировоззрением автора</label>
-            </div>
-            <div class="slider">
-                <button class="sliderBtn left"></button>
-                <img src="./imgs/SliderImg.png"/>
-                <button class="sliderBtn right"></button>
-            </div>
+        <img class="back" src="./imgs/index/mainWords.png"/>
+        <img src="./imgs/index/mainWoman.png"/>
+    </header>
+    <div class="section1 section"></div>
+    <div class="section2 section">
+        <div class="leftTop">
+            <img src="./imgs/index/MomEllyTee.png"/>
+            <div class="info">
+                <div class="title">MOM ELLY TEE</div>
+                <div class="price">2 490₽</div>
+            </div> 
+        </div>
+        <div class="rightTop">
+            <div class="mom">MOM</div>
+            <div class="elly">ELLY</div>
+        </div>
+        <div class="leftBottom">
+            <div>олицетворение</div>
+            <div>спокойствия</div>
+            <div>даже</div>
+            <div>в</div>
+            <div>самых</div>
+            <div>сложных</div>
+            <div>ситуациях</div>   
+        </div>
+        <div class="rightBottom">
+            <img src="./imgs/index/MomEllyPants.png"/>
+            <div class="info">
+                <div class="title">MOM ELLY TEE</div>
+                <div class="price">2 490₽</div>
+            </div> 
         </div>
     </div>
+    <div class="section3 section">
+        <div class="cards">
+            <div class="row">
+                <div class="card first">
+                    <img src="./imgs/index/CapsuleHoodie.png"/>
+                    <label class="name">WW CAPSULE HOODIE</label>
+                    <label class="price">4 600₽</label>
+                </div>
+                <div class="card second">
+                    <img src="./imgs/index/CapsuleTee1.png"/>
+                    <label class="name">WW CAPSULE "CHEAP" TEE</label>
+                    <label class="price">1 720₽</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card third">
+                    <img src="./imgs/index/CapsuleTee2.png"/>
+                    <label class="name">WW CAPSULE "VASILY" TEE</label>
+                    <label class="price">2 200₽</label>
+                </div>
+                <div class="card fourth">
+                    <img src="./imgs/index/CapsulePants.png"/>
+                    <label class="name">WW CAPSULE PANTS</label>
+                    <label class="price">4 600₽</label>
+                </div>
+            </div>
+        </div>
+        <img class="bg" src="./imgs/index/CapsuleCollection.png"/>
+    </div>
+    <div class="section4 section"></div>
+    <div class="section5 section">
+        <div class="card">
+            <img src="./imgs/index/section5tee1.png"/>
+            <label class="name">SIKKBODY TEE WHITE</label>
+            <label class="price">2 000₽</label>
+        </div>
+        <div class="card">
+            <img src="./imgs/index/section5tee2.png"/>
+            <label class="name">COSTS A LOT TEE</label>
+            <label class="price">2 190₽</label>
+        </div>
+    </div>
+    <div class="section6 section"></div>
     <footer>
         <div class="contacts">
             <label class="footerTitle">Контакты</label>

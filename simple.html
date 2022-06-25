@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHEEZYSIKK</title>
     <link rel="stylesheet" href="./css/simple.css">
-    <link rel="stylesheet" href="./css/deliver.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="./imgs/Logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./imgs/Logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -66,64 +65,80 @@
            </div>
         </div>
     </div>
-    <a href="index.html" id="logo" class="logo">
+    <div id="logo" class="logo">
         <img src="./imgs/Logo.png"/>
-    </ф>
+    </div>
     <div id="bucketBtn">
         <img src="./imgs/Bucket.png"/>
         <div id="menuBucketItemsCount">0</div>
     </div>
     <div class="wrapper">
         <header>
-            <a class="pmenu" href="index.html">О нас</a>
-            <a class="pmenu" href="#">Контакты</a>
-            <a class="pmenu" href="#">Доставка</a>
+            <a class="pmenu" id="aboutUsBtn">О нас</a>
+            <a class="pmenu" href="deliver.html">Контакты</a>
+            <a class="pmenu" href="deliver.html">Доставка</a>
             <div class="menu">
                 <label id="siteStyle">
                     Внешний вид магазина
                 </label>
                 <div id="stylesMenu">
-                    <a class="styleOption">Строго и со вкусом</a>
-                    <a class="styleOption">Коротко и по делу</a>
+                    <a href="index.html" class="styleOption">Строго и со вкусом</a>
+                    <a href="#" class="styleOption">Коротко и по делу</a>
                     <a class="styleOption">Версия для слабовидящих</a>
                 </div>
             </div>
         </header>
-        <label class="deliverTitle">Информация о доставке и возврате товара</label>
-        <div class="deliverContent">
-            <p>Сколько стоит доставка?</p>
-            <label class="deliverText">
-                <div>Стоимость доставки варьируется от места доставки:</div>
-                <div>По России - 350₽</div>
-                <div>По миру - 1000₽</div>
-                <div>Отправляем Почтой России.</div>
-            </label>
-
-            <p>Сколько по времени ожидать отправку заказа?</p>
-            <label class="deliverText">
-                <div>После оформления, мы отправляем заказ в течение 14 рабочих дней.</div>
-            </label>
-
-            <p>Сколько по времени ожидать доставку заказа по России и миру?</p>
-            <label class="deliverText">
-                <div>Доставка по России в среднем 2-6 дней с момента отправки.</div>
-                <div>По миру 2-4 недели с момента отправки.</div>
-            </label>
-
-            <p>Как отслеживать свою посылку?</p>
-            <label class="deliverText">
-                <div>После оформления заказа, вам придет сообщение в директ/вк о</div>
-                <div>готовности посылки к отправки. Далее вам придет сообщение с</div>
-                <div>ссылкой, по которой можно отслеживать ваш заказ.</div>
-            </label>
-
-            <p>Есть ли возможность возврата?</p>
-            <label class="deliverText">
-                <div>Мы возвращаем деньги за товар только в случае брака. Если вы просто</div>
-                <div>передумали, вернуть вещь, к сожалению, невозможно.</div>
-            </label>
+        <div class="topScreen">
+            <img src="./imgs/MainScreenImg.png"/>
+            <div class="icons">
+                <a href="https://t.me/sheezysikk" class="link">
+                    <img src="./imgs/MainScreenTlg.png"/>
+                </a>
+                <a href="https://www.instagram.com/sheezysikk" class="link">
+                    <img src="./imgs/MainScreenInst.png"/>
+                </a>
+                <a href="https://vk.com/sheezysikk" class="link">
+                    <img src="./imgs/MainScreenVk.png"/>
+                </a> 
+            </div>
+            <div class="list">
+                <label class="title">Категории</label>
+                <label id="accessoriesLink" class="listItem">Аксессуары</label>
+                <label id="teesLink" class="listItem">Футболки</label>
+                <label id="pantsLink" class="listItem">Штаны</label>
+                <label id="hoodiesLink" class="listItem">Худи</label>
+            </div>
+        </div>     
+        <div class="products">
+            <div id="teesPoint" class="productsType">
+                <label class="title">Футболки</label>
+                <div id="teeProducts" class="productsRow"></div>
+            </div>
+            <div id="hoodiePoint" class="productsType">
+                <label class="title">Худи</label>
+                <div id="hoodieProducts" class="productsRow"></div>
+            </div>
+            <div id="pantsPoint" class="productsType">
+                <label class="title">Штаны</label>
+                <div id="pantsProducts" class="productsRow"></div>
+            </div>
+            <div id="accessoriesPoint" class="productsType">
+                <label class="title">Аксессуары</label>
+                <div id="accessoriesProducts" class="productsRow"></div>
+            </div>
         </div>
-        <a class="goBack" href="index.html">Вернуться на главную 〉</a>
+        <label class="aboutUsTitle">О нас</label>
+        <div class="aboutUs" id="aboutUsPoint">
+            <div class="text">
+                <label class="name">SHEEZYSIKK</label>
+                <label class="mainText">Бренд одежды, вдохновленный собственным мировоззрением автора</label>
+            </div>
+            <div class="slider">
+                <button class="sliderBtn left"></button>
+                <img src="./imgs/SliderImg.png"/>
+                <button class="sliderBtn right"></button>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="contacts">
@@ -147,6 +162,6 @@
             <a class="footerLink">Обмен и возврат</a>
         </div>
     </footer>
-    <script src="./js/deliver.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
