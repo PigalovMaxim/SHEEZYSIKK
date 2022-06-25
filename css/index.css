@@ -152,6 +152,28 @@ header {
     color: #5F5D5D;
     font-weight: 300;
 }
+.icons {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.icons .link{
+    height: 36px;
+    width: 36px;
+    position: relative;
+    cursor: pointer;
+}
+.icons .link img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*Products*/
 .products {
     width: 100%;
     display: flex;
