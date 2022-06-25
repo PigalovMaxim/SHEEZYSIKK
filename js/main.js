@@ -133,7 +133,6 @@ document.getElementById('bucketBtn').addEventListener('click', () => {
 });
 function drawItems() {
     const items = document.getElementById('items');
-    console.log(bucketContent);
     items.innerHTML = '';
     let purcahsesSum = 0;
     bucketContent.forEach((value, index) => {
@@ -174,7 +173,7 @@ function drawItems() {
                     value.price.replace(/\D+/g,"")
                 ) + '₽';
             sum.innerHTML = parseInt(value.price.replace(/\D+/g,"")) * value.count + '₽';
-            
+            setItemsCount();
         });
         count.appendChild(btnMinus);
         const countNum = document.createElement('span');
@@ -194,7 +193,7 @@ function drawItems() {
                     value.price.replace(/\D+/g,"")
                 ) + '₽';
             sum.innerHTML = parseInt(value.price.replace(/\D+/g,"")) * value.count + '₽';
-            
+            setItemsCount();
         });
         count.appendChild(btnPlus);
         item.appendChild(count);
@@ -203,14 +202,19 @@ function drawItems() {
         btnCross.setAttribute('id', 'controlsBtnCross');
         btnCross.addEventListener('click', () => {
             bucketContent.splice(index, 1);
-            document.getElementById('menuBucketItemsCount').innerHTML = bucketContent.length;
             drawItems();
         });
         item.appendChild(btnCross);
         items.appendChild(item);
     });
-    document.getElementById('itemsCountNumber').innerHTML = bucketContent.length;
+    setItemsCount();
     document.getElementById('itemsSumNumber').innerHTML = purcahsesSum + '₽';
+}
+function setItemsCount() {
+    let count = 0;
+    bucketContent.forEach(value => count += value.count);
+    document.getElementById('menuBucketItemsCount').innerHTML = count;
+    document.getElementById('itemsCountNumber').innerHTML = count;
 }
 function loadProducts() {
   const teeRow = document.getElementById("teeProducts");
