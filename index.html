@@ -32,8 +32,8 @@
                     </div> 
                     <label class="name">Описание:</label>
                     <div class="desc">
-                        100% хлопок
-                        Прямая печать
+                        <div>100% хлопок</div>
+                        <div>Прямая печать</div>
                     </div> 
                 </div>
                 <button id="addProduct">Добавить в корзину</button>
@@ -43,10 +43,97 @@
             </button>
         </div>
     </div>
+    <div id="bucketWindow" class="bucket hidden">
+        <label class="title">Корзина</label>
+        <div class="productsList">
+            <div class="types">
+                <label class="type first">Название:</label>
+                <label class="type second">Размер:</label>
+                <label class="type third">Арт:</label>
+                <label class="type fourth">Кол - во:</label>
+                <label class="type fifth">Сумма:</label>
+            </div>
+            <div id="items">
+                <div class="item">
+                    <img src="./imgs/CovidLogoHoodie.png"/>
+                    <label class="itemName">SOCIAL HELP TEE</label>
+                    <label class="itemSize">S</label>
+                    <label class="itemArt">2312</label>
+                    <div class="itemCount">
+                        <button id="controlsBtnMinus"></button>
+                        <span class="count">1</span>
+                        <button id="controlsBtnPlus"></button>
+                    </div>
+                    <label class="itemSum">3 980₽</label>
+                    <button id="controlsBtnCross"></button>
+                </div>
+                <div class="item">
+                    <img src="./imgs/CovidLogoHoodie.png"/>
+                    <label class="itemName">SOCIAL HELP TEE</label>
+                    <label class="itemSize">S</label>
+                    <label class="itemArt">2312</label>
+                    <div class="itemCount">
+                        <button id="controlsBtnMinus"></button>
+                        <span class="count">1</span>
+                        <button id="controlsBtnPlus"></button>
+                    </div>
+                    <label class="itemSum">3 980₽</label>
+                    <button id="controlsBtnCross"></button>
+                </div>
+                <div class="item">
+                    <img src="./imgs/CovidLogoHoodie.png"/>
+                    <label class="itemName">SOCIAL HELP TEE</label>
+                    <label class="itemSize">S</label>
+                    <label class="itemArt">2312</label>
+                    <div class="itemCount">
+                        <button id="controlsBtnMinus"></button>
+                        <span class="count">1</span>
+                        <button id="controlsBtnPlus"></button>
+                    </div>
+                    <label class="itemSum">3 980₽</label>
+                    <button id="controlsBtnCross"></button>
+                </div>
+                <div class="item">
+                    <img src="./imgs/CovidLogoHoodie.png"/>
+                    <label class="itemName">SOCIAL HELP TEE</label>
+                    <label class="itemSize">S</label>
+                    <label class="itemArt">2312</label>
+                    <div class="itemCount">
+                        <button id="controlsBtnMinus"></button>
+                        <span class="count">1</span>
+                        <button id="controlsBtnPlus"></button>
+                    </div>
+                    <label class="itemSum">3 980₽</label>
+                    <button id="controlsBtnCross"></button>
+                </div>
+                <div class="item">
+                    <img src="./imgs/CovidLogoHoodie.png"/>
+                    <label class="itemName">SOCIAL HELP TEE</label>
+                    <label class="itemSize">S</label>
+                    <label class="itemArt">2312</label>
+                    <div class="itemCount">
+                        <button id="controlsBtnMinus"></button>
+                        <span class="count">1</span>
+                        <button id="controlsBtnPlus"></button>
+                    </div>
+                    <label class="itemSum">3 980₽</label>
+                    <button id="controlsBtnCross"></button>
+                </div>
+            </div>
+            <div class="bucketInfo">
+                <div id="bucketCount">Всего товаров в корзине: <span class="number">5</span></div>
+                <div id="bucketSum">Общая сумма: <span class="number">16 160₽</span></div>
+            </div>
+           <div class="buttonsControls">
+                <button class="getPurchase">Перейти к оформлению заказа</button>
+                <button id="continuePurchase">Продолжить покупки</button>
+           </div>
+        </div>
+    </div>
     <div class="logo">
         <img src="./imgs/Logo.png"/>
     </div>
-    <div class="bucket">
+    <div id="bucketBtn">
         <img src="./imgs/Bucket.png"/>
     </div>
     <div class="wrapper">

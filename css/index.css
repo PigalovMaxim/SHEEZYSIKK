@@ -24,15 +24,16 @@ body {
     left: 35px;
     z-index: 1000;
 }
-.bucket {
+#bucketBtn {
     position: absolute;
     height: 40px;
     width: 40px;
     top: 20px;
     right: 50px;
     z-index: 1000;
+    cursor: pointer;
 }
-.logo img, .bucket img {
+.logo img, #bucketBtn img {
     width: 100%;
     height: 100%;
 }
@@ -429,6 +430,7 @@ footer {
     font-size: 27px;
     line-height: 33px;
     color: #5F5D5D;
+    text-transform: uppercase;
 }
 .infoWrapper .titles .price{
     font-weight: 500;
@@ -501,4 +503,180 @@ footer {
 #hideProductCard img {
     width: 100%;
     height: 100%;
+}
+/*Bucket*/
+.bucket {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 110px;
+}
+.bucket .title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+    color: #5F5D5D;
+    margin-bottom: 50px;
+}
+.bucket .productsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1150px;
+}
+.bucket .productsList #items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1150px;
+    height: 620px;
+    overflow-y: scroll;
+}
+.bucket .productsList #items .item{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #5F5D5D;
+    border-radius: 10px;
+    position: relative;
+}
+.bucket .productsList #items .item * {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5F5D5D;
+}
+.bucket .productsList #items .item img {
+    width: 110px;
+    height: 110px;
+}
+.bucket .productsList #items .item .itemName {
+    margin-left: 46px;
+}
+.bucket .productsList #items .item .itemSize {
+    margin-left: 140px;
+}
+.bucket .productsList #items .item .itemArt {
+    margin-left: 95px;
+}
+.bucket .productsList #items .item .itemCount {
+    margin-left: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bucket .productsList #items .item .itemSum {
+    margin-left: 66px;
+}
+#controlsBtnMinus, #controlsBtnPlus, #controlsBtnCross {
+    width: 21px;
+    height: 21px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+#controlsBtnMinus {
+    background: url('../imgs/BtnMinus.png');
+    margin-right: 26px;
+}
+#controlsBtnPlus {
+    margin-left: 26px;
+    background: url('../imgs/BtnPlus.png');
+}
+#controlsBtnCross {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url('../imgs/BtnCross.png');
+}
+.types {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.first {
+    margin-left: 175px;
+}
+.second {
+    margin-left: 210px;
+}
+.third {
+    margin-left: 70px;
+}
+.fourth {
+    margin-left: 86px;
+}
+.fifth {
+    margin-left: 85px;
+}
+.bucketInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#bucketCount, #bucketSum {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #5F5D5D;
+    margin-top: 20px;
+}
+.number {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #5F5D5D;
+    margin-left: 10px;
+}
+.buttonsControls {
+    position: absolute;
+    bottom: 30px;
+    right: 370px;
+}
+.getPurchase {
+    width: 362px;
+    height: 63px;
+    background: #5F5D5D;
+    border-radius: 20px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#continuePurchase {
+    width: 295px;
+    height: 63px;
+    background: #E5E5E5;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5F5D5D;
+    border: none;
+    margin-left: 25px;
+    cursor: pointer;
 }

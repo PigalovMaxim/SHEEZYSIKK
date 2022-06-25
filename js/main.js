@@ -102,7 +102,13 @@ sizesBtns.forEach((value, index) => {
 });
 
 document.getElementById('hideProductCard').addEventListener('click', () => {
-    document.querySelector('#wrapperProduct').classList.add('hidden');
+    document.getElementById('wrapperProduct').classList.add('hidden');bucketWindow
+});
+document.getElementById('continuePurchase').addEventListener('click', () => {
+    document.getElementById('bucketWindow').classList.add('hidden');
+});
+document.getElementById('bucketBtn').addEventListener('click', () => {
+    document.getElementById('bucketWindow').classList.remove('hidden');
 });
 
 function loadProducts() {
@@ -141,7 +147,7 @@ function createItems(arr, row, classname) {
   });
 }
 function linkItemToInfo(item) {
-    document.querySelector('#wrapperProduct').classList.remove('hidden');
+    document.getElementById('wrapperProduct').classList.remove('hidden');
     document.getElementById('productImg').setAttribute('src', item.img);
     document.getElementById('productName').innerHTML = item.name;
     document.getElementById('productPrice').innerHTML = item.price;
