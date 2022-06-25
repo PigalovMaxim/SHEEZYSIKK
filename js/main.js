@@ -121,6 +121,12 @@ sizesBtns.forEach((value, index) => {
     })
 });
 
+document.getElementById('accessoriesLink').addEventListener('click', () => document.getElementById('accessoriesPoint').scrollIntoView());
+document.getElementById('teesLink').addEventListener('click', () => document.getElementById('teesPoint').scrollIntoView());
+document.getElementById('pantsLink').addEventListener('click', () => document.getElementById('pantsPoint').scrollIntoView());
+document.getElementById('hoodiesLink').addEventListener('click', () => document.getElementById('hoodiePoint').scrollIntoView());
+document.getElementById('logo').addEventListener('click', () => window.scrollTo(0, 0));
+
 document.getElementById('hideProductCard').addEventListener('click', () => {
     document.getElementById('wrapperProduct').classList.add('hidden');
 });
@@ -131,6 +137,7 @@ document.getElementById('bucketBtn').addEventListener('click', () => {
     document.getElementById('bucketWindow').classList.remove('hidden');
     drawItems();
 });
+
 function drawItems() {
     const items = document.getElementById('items');
     items.innerHTML = '';

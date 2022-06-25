@@ -23,6 +23,7 @@ body {
     top: 5px;
     left: 35px;
     z-index: 1000;
+    cursor: pointer;
 }
 #bucketBtn {
     position: fixed;
