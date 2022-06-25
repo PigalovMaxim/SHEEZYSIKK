@@ -162,6 +162,20 @@ function drawItems() {
         count.classList.add('itemCount');
         const btnMinus = document.createElement('button');
         btnMinus.setAttribute('id', 'controlsBtnMinus');
+        btnMinus.addEventListener('click', () => {
+            const currNum = parseInt(countNum.innerHTML);
+            if(currNum === 1) return;
+            countNum.innerHTML = currNum - 1;
+            value.count = currNum - 1;
+            document.getElementById('itemsSumNumber').innerHTML = 
+                parseInt(
+                    document.getElementById('itemsSumNumber').innerHTML.replace(/\D+/g,"")
+                ) - parseInt(
+                    value.price.replace(/\D+/g,"")
+                ) + '₽';
+            sum.innerHTML = parseInt(value.price.replace(/\D+/g,"")) * value.count + '₽';
+            
+        });
         count.appendChild(btnMinus);
         const countNum = document.createElement('span');
         countNum.classList.add('count');
@@ -189,6 +203,7 @@ function drawItems() {
         btnCross.setAttribute('id', 'controlsBtnCross');
         btnCross.addEventListener('click', () => {
             bucketContent.splice(index, 1);
+            document.getElementById('menuBucketItemsCount').innerHTML = bucketContent.length;
             drawItems();
         });
         item.appendChild(btnCross);
