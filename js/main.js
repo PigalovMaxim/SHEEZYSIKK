@@ -115,6 +115,7 @@ sizesBtns.forEach((value, index) => {
             if(i === index) {
                 sizesBtns[i].classList.add('active');
                 choosenSize = sizesBtns[i].innerHTML;
+                document.getElementById('addProduct').innerHTML = 'Добавить в корзину';
             }
         }
     })
@@ -244,9 +245,8 @@ function linkItemToInfo(item) {
     wrapper.appendChild(btn);
     document.getElementById('addProduct').addEventListener('click', () => {
         bucketContent.push({...item, count: 1, choosenSize});
-        document.getElementById('bucketWindow').classList.remove('hidden');
-        document.getElementById('wrapperProduct').classList.add('hidden');
-        drawItems();
+        document.getElementById('addProduct').innerHTML = 'Товар добавлен';
+        document.getElementById('menuBucketItemsCount').innerHTML = bucketContent.length;
     });
 }
 

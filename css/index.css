@@ -17,7 +17,7 @@ body {
     visibility: hidden !important;
 }
 .logo {
-    position: absolute;
+    position: fixed;
     height: 63px;
     width: 63px;
     top: 5px;
@@ -25,13 +25,26 @@ body {
     z-index: 1000;
 }
 #bucketBtn {
-    position: absolute;
+    position: fixed;
     height: 40px;
     width: 40px;
     top: 20px;
     right: 50px;
     z-index: 1000;
     cursor: pointer;
+}
+#menuBucketItemsCount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    border: 1px solid black;
 }
 .logo img, #bucketBtn img {
     width: 100%;
