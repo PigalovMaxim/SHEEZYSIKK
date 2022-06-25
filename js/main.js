@@ -125,6 +125,7 @@ document.getElementById('accessoriesLink').addEventListener('click', () => docum
 document.getElementById('teesLink').addEventListener('click', () => document.getElementById('teesPoint').scrollIntoView());
 document.getElementById('pantsLink').addEventListener('click', () => document.getElementById('pantsPoint').scrollIntoView());
 document.getElementById('hoodiesLink').addEventListener('click', () => document.getElementById('hoodiePoint').scrollIntoView());
+document.getElementById('aboutUsBtn').addEventListener('click', () => document.getElementById('aboutUsPoint').scrollIntoView());
 document.getElementById('logo').addEventListener('click', () => window.scrollTo(0, 0));
 
 document.getElementById('hideProductCard').addEventListener('click', () => {
