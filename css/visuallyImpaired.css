@@ -114,11 +114,12 @@ header .bucket {
 }
 .mainPage {
     padding: 60px;
+    padding-top: 120px;
     overflow: hidden;
 }
 .mainPage .instruments {
     height: 100px;
-    width: 100%;
+    width: 1190px;
     margin-top: 10px;
 }
 .mainPage .menu{
@@ -559,4 +560,8 @@ header .bucket {
     align-items: flex-start;
     width: 700px;
     margin-bottom: 125px;
+}
+.instruments {
+    background: url('../imgs/visuallyImpaired/mainFonts.png') no-repeat;
+
 }
