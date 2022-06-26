@@ -89,14 +89,41 @@
         </div>
         <button id="getPurchase">Оформить заказ</button>
     </div>
+    <div id="collection" class="hidden">
+        <div class="content">
+            <div id="cards"></div>
+        </div>
+        <footer>
+            <div class="contacts">
+                <label class="footerTitle">Контакты</label>
+                <a href="https://vk.com/sheezysikk" class="footerLink">
+                    <img src="./imgs/FooterLinkVk.png"/>
+                    https://vk.com/sheezysikk
+                </a>
+                <a href="https://t.me/sheezysikk" class="footerLink">
+                    <img src="./imgs/FooterLinkTlg.png" />
+                    https://t.me/sheezysikk
+                </a>
+                <a href="https://www.instagram.com/sheezysikk" class="footerLink">
+                    <img src="./imgs/FooterLinkInst.png"/>
+                    sheezysikk
+                </a>
+            </div>
+            <div class="info">
+                <label class="footerTitle">Информация</label>
+                <a class="footerLink">Доставка</a>
+                <a class="footerLink">Обмен и возврат</a>
+            </div>
+        </footer>
+    </div>
     <header>
         <div class="mainMenu">
             <div class="box">
                 <a class="pmenu" id="aboutUsBtn">О нас</a>
-                <a class="pmenu" href="deliver.html">Контакты</a>
+                <a class="pmenu" href="deliverIndex.html">Контакты</a>
             </div>
             <div class="box">
-                <a class="pmenu" href="deliver.html">Доставка</a>
+                <a class="pmenu" href="deliverIndex.html">Доставка</a>
                 <div class="menu">
                     <label id="siteStyle">
                         Внешний вид магазина
@@ -112,7 +139,9 @@
         <img class="back" src="./imgs/index/mainWords.png"/>
         <img src="./imgs/index/mainWoman.png"/>
     </header>
-    <div class="section1 section"></div>
+    <div class="section1 section">
+        <button id="lookAll">Посмотреть всю коллекцию</button>
+    </div>
     <div class="section2 section">
         <div id="momEllyTeeProd" class="leftTop clickable">
             <img src="./imgs/index/MomEllyTee.png"/>
@@ -134,10 +163,10 @@
             <div>сложных</div>
             <div>ситуациях</div>   
         </div>
-        <div class="rightBottom clickable">
+        <div id="momEllyPantsProd" class="rightBottom clickable">
             <img src="./imgs/index/MomEllyPants.png"/>
             <div class="info">
-                <div class="title">MOM ELLY TEE</div>
+                <div class="title">MOM ELLY PANTS</div>
                 <div class="price">2 490₽</div>
             </div> 
         </div>
@@ -145,24 +174,24 @@
     <div class="section3 section">
         <div class="cards">
             <div class="row">
-                <div class="card first clickable">
+                <div id="capsuleHoodieProd" class="card first clickable">
                     <img src="./imgs/index/CapsuleHoodie.png"/>
                     <label class="name">WW CAPSULE HOODIE</label>
                     <label class="price">4 600₽</label>
                 </div>
-                <div class="card second clickable">
+                <div id="capsuleTee1Prod" class="card second clickable">
                     <img src="./imgs/index/CapsuleTee1.png"/>
                     <label class="name">WW CAPSULE "CHEAP" TEE</label>
                     <label class="price">1 720₽</label>
                 </div>
             </div>
             <div class="row">
-                <div class="card third clickable">
+                <div id="capsuleTee2Prod" class="card third clickable">
                     <img src="./imgs/index/CapsuleTee2.png"/>
                     <label class="name">WW CAPSULE "VASILY" TEE</label>
                     <label class="price">2 200₽</label>
                 </div>
-                <div class="card fourth clickable">
+                <div id="capsulePantsProd" class="card fourth clickable">
                     <img src="./imgs/index/CapsulePants.png"/>
                     <label class="name">WW CAPSULE PANTS</label>
                     <label class="price">4 600₽</label>
@@ -175,12 +204,12 @@
         <img src="./imgs/index/HoldMyHand.png"/>
     </div>
     <div class="section5 section">
-        <div class="card clickable">
+        <div id="lastTee1" class="card clickable">
             <img src="./imgs/index/section5tee1.png"/>
             <label class="name">SIKKBODY TEE WHITE</label>
             <label class="price">2 000₽</label>
         </div>
-        <div class="card clickable">
+        <div id="lastTee2" class="card clickable">
             <img src="./imgs/index/section5tee2.png"/>
             <label class="name">COSTS A LOT TEE</label>
             <label class="price">2 190₽</label>
