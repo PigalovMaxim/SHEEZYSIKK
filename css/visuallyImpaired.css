@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #050505;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+header {
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+header .bucket {
+    cursor: pointer;
+}
+.hidden {
+    display: none !important;
+}
+.pmenu {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    transition: color 0.25s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.pmenu:hover {
+    color: grey;
+}
+.menu {
+    position: relative;
+}
+#siteStyle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: color 0.25s ease-in-out;
+    cursor: pointer;
+    background: #5F5D5D;
+    border-radius: 25px;
+    padding: 10px 35px; 
+}
+.menu:hover #stylesMenu{
+    visibility: visible;
+    opacity: 1;
+}
+#stylesMenu {
+    position: absolute;
+    visibility: hidden;
+    transition: 0.35s ease-in-out;
+    opacity: 0;
+    left: 0;
+    bottom: -170px;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.styleOption {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
+    cursor: pointer;
+}
+.styleOption:hover {
+    background-color: #5F5D5D;
+    color: white;
+}
+.page {
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mainPage {
+    padding: 60px;
+    overflow: hidden;
+}
+.mainPage .instruments {
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+}
+.mainPage .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mainPage .menu .title {
+    font-weight: 900;
+    font-size: 165px;
+    line-height: 201px;
+    letter-spacing: 0.025em;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.mainPage .menu button {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.12em;
+    color: #000000;
+    background: transparent;
+    border: none;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.productsPage .title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.12em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.productsPage .products {
+    width: 1180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.productsPage .products .product {
+    min-width: 580px;
+    max-width: 580px;
+    height: 668px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.productsPage .products .margins {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.productsPage .products .product .price {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+}
+.productsPage .products .product .priceText {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+}
+.productsPage .products .product .name {
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+}
+.productsPage .products .product .nameText {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+}
+.productsPage .products .product .type {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    max-width: 361px;
+}
+.productsPage .products .product img {
+    height: 350px;
+    margin-bottom: 10px;
+}
+.productsPage header, #wrapperProduct header, .bucketPage header , #contactsPage header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    justify-content: space-between;
+    color: black;
+    padding: 0 320px;
+    padding-right: 30px;
+}
+.productsPage header .logo, #wrapperProduct header .logo, .bucketPage header .logo, #contactsPage header .logo  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.productsPage header .logo span, #wrapperProduct header .logo span, .bucketPage header .logo span, #contactsPage header .logo span{
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+}
+.productsPage header *, #wrapperProduct header *, .bucketPage header *, #contactsPage header *{
+    color: black;
+}
+#wrapperProduct {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    z-index: 100000000;
+    padding-top: 110px;
+}
+#wrapperProduct .title{
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.12em;
+    color: #000000;
+}
+.cardProd {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.cardProd .image{
+    height: 538px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cardProd .image .text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+}
+.cardProd .image img{
+    width: 100%;
+    height: 100%;
+}
+.infoWrapper {
+    height: 100%;
+    width: 340px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.infoWrapper .titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.infoWrapper .titles .priceText, .infoWrapper .titles .nameText {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+.infoWrapper .titles .name {
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 33px;
+    color: #5F5D5D;
+    text-transform: uppercase;
+}
+.infoWrapper .titles .price{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: black;
+}
+.infoWrapper .productInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.infoWrapper .productInfo .name,
+.infoWrapper .productInfo .desc {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+}
+.infoWrapper .productInfo .name {
+    margin-bottom: 10px;
+}
+.infoWrapper .productInfo .sizes {
+    margin-bottom: 28px;
+}
+.infoWrapper .productInfo .sizes .size:first-child {
+    margin-left: 0;
+}
+.infoWrapper .productInfo .size {
+    height: 41px;
+    width: 41px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    color: black;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.infoWrapper .productInfo .active{
+    background-color: black;
+    color: white;
+}
+#addProduct {
+    background: black;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 277px;
+    height: 56px;
+    border: 0;
+    cursor: pointer;
+}
+#hideProductCard {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#hideProductCard img {
+    width: 100%;
+    height: 100%;
+}
+.bucketPage {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 110px;
+    padding-top: 110px;
+}
+.bucketPage .title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.12em;
+    color: #000000;
+}
+.bucketPage .title2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+.bucketPage .productsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1160px;
+    position: relative;
+}
+.bucketPage .productsList #items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 530px;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+.bucketPage .productsList #items .item{
+    width: 100%;
+    min-height: 260px;
+    max-height: 260px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+}
+.bucketPage .productsList #items .item .sum{
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+.bucketPage .productsList #items .item .sum *{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+    text-align: right;
+}
+.bucketPage .productsList #items .item .info .nameText, .bucketPage .productsList #items .item .info .count{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+.bucketPage .productsList #items .item .info .nameText span {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    margin-left: 25px;
+}
+.bucketPage .productsList #items .item .info .count .controls {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bucketPage .productsList #items .item .info .count .controls .countItem{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#btnMinus, #btnPlus {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #000000;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 34px;
+    color: #000000;
+    cursor: pointer;
+}
+#btnCross {
+    height: 46px;
+    width: 46px;
+    background: url("../imgs/visuallyImpaired/btnCross.png");
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+}
+.bucketInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.bucketInfo * {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+.getPurchase {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 85px;
+    background: #000000;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+.contactsTitle {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.12em;
+    margin-bottom: 50px;
+}
+.contactsLink {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 700px;
+    margin-bottom: 125px;
+}

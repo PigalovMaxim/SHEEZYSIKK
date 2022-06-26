@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEEZYSIKK</title>
+    <link rel="stylesheet" href="./css/visuallyImpaired.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./imgs/Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="mainPage" class="page mainPage">
+        <header>
+            <div class="logo">
+                <img src="./imgs/visuallyImpaired/logo.png"/>
+            </div>
+            <span id="contacts" class="pmenu">Контакты</span>
+            <a class="pmenu" href="deliverVI.html">Доставка</a>
+            <div class="menu">
+                <label id="siteStyle">
+                    Внешний вид магазина
+                </label>
+                <div id="stylesMenu">
+                    <a href="index.html" class="styleOption">Строго и со вкусом</a>
+                    <a href="#" class="styleOption">Коротко и по делу</a>
+                    <a href="visuallyImpaired.html" class="styleOption">Версия для слабовидящих</a>
+                </div>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/visuallyImpaired/Bucket.png"/>
+            </div>
+        </header>
+        <div class="instruments"></div>
+        <div class="menu">
+            <div class="title">SHEEZYSIKK</div>
+            <button id="accessories">АКСЕССУАРЫ</button>
+            <button id="tees">ФУТБОЛКИ</button>
+            <button id="pants">ШТАНЫ</button>
+            <button id="hoodies">ХУДИ</button>
+        </div>
+    </div>
+    <div id="accessoriesPage" class="page accessoriesPage productsPage hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/Bucket.png"/>
+            </div>
+        </header>
+        <div class="title">АКСЕССУАРЫ</div>
+        <div id="accProducts" class="products"></div>
+    </div>
+    <div id="teesPage" class="page teesPage productsPage hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/Bucket.png"/>
+            </div>
+        </header>
+        <div class="title">ФУТБОЛКИ</div>
+        <div id="teesProducts" class="products"></div>
+    </div>
+    <div id="pantsPage" class="page pantsPage productsPage hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/Bucket.png"/>
+            </div>
+        </header>
+        <div class="title">ШТАНЫ</div>
+        <div id="pantsProducts" class="products"></div>
+    </div>
+    <div id="hoodiePage" class="page hoodiePage productsPage hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/Bucket.png"/>
+            </div>
+        </header>
+        <div class="title">ХУДИ</div>
+        <div id="hoodieProducts" class="products"></div>
+    </div>
+    <div id="contactsPage" class="page contactsPage hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/Bucket.png"/>
+            </div>
+        </header>
+        <div class="contactsTitle">КОНТАКТЫ</div>
+        <div class="contactsLink">
+            <div>Страница в вконтакте:</div>
+            <div>https://vk.com/sheezysikk</div>
+        </div>
+        <div class="contactsLink">
+            <div>Страница в инстаграме:</div>
+            <div>sheezysikk</div>
+        </div>
+        <div class="contactsLink">
+            <div>Страница в телеграме:</div>
+            <div>https://t.me/sheezysikk</div>
+        </div>
+    </div>
+    <div id="wrapperProduct" class="hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+            <div class="bucket">
+                <img src="./imgs/Bucket.png"/>
+            </div>
+        </header>
+        <div class="title">ИНФОРМАЦИЯ О ТОВАРЕ</div>
+        <div class="cardProd">
+            <div class="image">
+                <img id="productImg" src="./imgs/CovidLogoHoodie.png"/>
+                <div class="text">Изображение товара</div>
+            </div>
+            <div id="wrapperId" class="infoWrapper">
+                <div class="titles">
+                    <label class="nameText">наименование:</label>
+                    <label id="productName" class="name">WW CAPSULE HOODIE</label>
+                    <label class="priceText">цена:</label>
+                    <label id="productPrice" class="price">4 600₽</label>
+                </div>
+                <div class="productInfo">
+                    <label class="name">Размеры:</label>
+                    <span class="sizes">
+                        <button class="size">XS</button>
+                        <button class="size">S</button>
+                        <button class="size active">M</button>
+                        <button class="size">L</button>
+                        <button class="size">XL</button>
+                    </span> 
+                    <label class="name">Описание:</label>
+                    <div class="desc">
+                        <div>100% хлопок</div>
+                        <div>Прямая печать</div>
+                    </div> 
+                </div>
+                <button id="addProduct">Добавить в корзину</button>
+            </div>
+        </div>
+        <button id="hideProductCard">
+            <img src="./imgs/Cross.png"/>
+        </button>
+    </div>
+    <div id="bucketWindow" class="bucketPage hidden">
+        <header>
+            <div class="logo">
+                <img src="./imgs/Logo.png"/>
+                <span class="goBack">Вернуться на главную страницу</span>
+            </div>
+        </header>
+        <label class="title">Корзина</label>
+        <label class="title2">Добавленные товары</label>
+        <div class="productsList">
+            <div id="items"></div>
+            <div class="bucketInfo">
+                <div id="bucketCount">Всего товаров в корзине: <span id="itemsCountNumber" class="number">0</span></div>
+                <div id="bucketSum">Общая сумма: <span id="itemsSumNumber" class="number">0₽</span></div>
+            </div>
+            <button class="getPurchase">Оформить заказ</button>
+        </div>
+    </div>
+    <script src="./js/visuallyImpaired.js"></script>
+</body>
+</html>

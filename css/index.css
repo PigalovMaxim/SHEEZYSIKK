@@ -288,6 +288,7 @@ header img {
     align-items: center;
     width: 720px;
     height: 720px;
+    position: relative;
 }
 .section3 .cards .row {
     display: flex;
@@ -295,6 +296,30 @@ header img {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+.whitebox {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100;
+    position: absolute;
+}
+.firstWhiteBox {
+    top: 0;
+    left: 0;
+}
+.secondWhiteBox {
+    top: 0;
+    right: 0;
+}
+.thirdWhiteBox {
+    bottom: 0;
+    left: 0;
+}
+.fourthWhiteBox {
+    bottom: 0;
+    right: 0;
 }
 .section3 .cards .row .card {
     display: flex;
@@ -767,6 +792,19 @@ footer .info {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+#wrapperProduct .recommends {
+    width: 100%;
+    height: 35%;
+    margin-top: 20px;
+    background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#wrapperProduct .recommends img{
+    width: 30%;
 }
 #productName {
     font-weight: 300;
