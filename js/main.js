@@ -1,6 +1,7 @@
 const tees = [
   {
     img: "./imgs/MomEllyTee.png",
+    bigImg: "./imgs/HQItems/mom elly tee.png",
     name: "Mom elly tee",
     price: "2 490₽",
     oldPrice: null,
@@ -8,6 +9,7 @@ const tees = [
   },
   {
     img: "./imgs/SocialHelpTee.png",
+    bigImg: "./imgs/HQItems/social concept tee2.png",
     name: "SOCIAL HELP TEE",
     price: "1 990₽",
     oldPrice: "2 400₽",
@@ -15,6 +17,7 @@ const tees = [
   },
   {
     img: "./imgs/SocialConceptTee.png",
+    bigImg: "./imgs/HQItems/social concept tee.png",
     name: "SOCIAL CONCEPT TEE",
     price: "1 990₽",
     oldPrice: "2 400₽",
@@ -22,6 +25,7 @@ const tees = [
   },
   {
     img: "./imgs/CapsuleCheapTee.png",
+    bigImg: "./imgs/HQItems/ww tee.png",
     name: 'CAPSULE "CHEAP" TEE',
     price: "1 720₽",
     oldPrice: null,
@@ -30,7 +34,8 @@ const tees = [
 ];
 const hoodies = [
   {
-    img: "./imgs/WwCapsuleHoodie.png",
+    img: "./imgs/index/CapsuleHoodie.png",
+    bigImg: "./imgs/HQItems/hood ww.png",
     name: "WW CAPSULE HOODIE",
     price: "4 600₽",
     oldPrice: null,
@@ -38,6 +43,7 @@ const hoodies = [
   },
   {
     img: "./imgs/HoldMyHand.png",
+    bigImg: "./imgs/HQItems/mom elly hood.png",
     name: "HOLD MY HAND CREWNECK",
     price: "4 600₽",
     oldPrice: "5 900₽",
@@ -45,6 +51,7 @@ const hoodies = [
   },
   {
     img: "./imgs/CovidLogoHoodie.png",
+    bigImg: "./imgs/HQItems/sheezy hood.png",
     name: "SOCIAL CONCEPT TEE",
     price: "5 590₽",
     oldPrice: "6 700₽",
@@ -54,6 +61,7 @@ const hoodies = [
 const pants = [
   {
     img: "./imgs/CapsuleBlackPants.png",
+    bigImg: "./imgs/HQItems/ww pants.png",
     name: "CAPSULE BLACK PANTS",
     price: "4 600₽",
     oldPrice: null,
@@ -61,6 +69,7 @@ const pants = [
   },
   {
     img: "./imgs/PantsMomElly.png",
+    bigImg: "./imgs/HQItems/mom elly pants.png",
     name: "PANTS MOM ELLY",
     price: "6 590₽",
     oldPrice: "8 000₽",
@@ -68,6 +77,7 @@ const pants = [
   },
   {
     img: "./imgs/PantsRedBlood.png",
+    bigImg: "./imgs/HQItems/social concept pants.png",
     name: "PANTS RED BLOOD",
     price: "3 590₽",
     oldPrice: "4 400₽",
@@ -77,6 +87,7 @@ const pants = [
 const accessories = [
   {
     img: "./imgs/scarf.png",
+    bigImg: "./imgs/HQItems/scarfblack ww.png",
     name: "Scarf",
     price: "3 590₽",
     oldPrice: "4 400₽",
@@ -84,6 +95,7 @@ const accessories = [
   },
   {
     img: "./imgs/Hood.png",
+    bigImg: "./imgs/HQItems/kaporblack ww.png",
     name: "hood",
     price: "2 890₽",
     oldPrice: "3 500₽",
@@ -91,6 +103,7 @@ const accessories = [
   },
   {
     img: "./imgs/EarflapMask.png",
+    bigImg: "./imgs/HQItems/maskblack2.png",
     name: "EARFLAP MASK BLACK HOLE",
     price: "3 590₽",
     oldPrice: "4 000₽",
@@ -98,6 +111,7 @@ const accessories = [
   },
   {
     img: "./imgs/Sleeves.png",
+    bigImg: "./imgs/HQItems/rukava red ww.png",
     name: "sleeves",
     price: "3 590₽",
     oldPrice: "1 700₽",
@@ -261,7 +275,7 @@ function createItems(arr, row, classname) {
 }
 function linkItemToInfo(item) {
     document.getElementById('wrapperProduct').classList.remove('hidden');
-    document.getElementById('productImg').setAttribute('src', item.img);
+    document.getElementById('productImg').setAttribute('src', item.bigImg);
     document.getElementById('productName').innerHTML = item.name;
     document.getElementById('productPrice').innerHTML = item.price;
     document.getElementById('addProduct').remove();
