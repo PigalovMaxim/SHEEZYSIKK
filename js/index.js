@@ -1,5 +1,6 @@
 const momEllyTee = {
   img: "./imgs/index/MomEllyTee.png",
+  bigImg: "./imgs/HQItems/mom elly tee.png",
   name: "MOM ELLY TEE",
   price: "2 490₽",
   isLongImg: false,
@@ -8,6 +9,7 @@ const momEllyTee = {
 };
 const momEllyPants = {
   img: "./imgs/index/MomEllyPants.png",
+  bigImg: "./imgs/HQItems/mom elly pants.png",
   name: "MOM ELLY PANTS",
   price: "2 490₽",
   isLongImg: true,
@@ -15,6 +17,7 @@ const momEllyPants = {
 };
 const capsuleHoodie = {
   img: "./imgs/index/CapsuleHoodie.png",
+  bigImg: "./imgs/HQItems/hood ww.png",
   name: "WW CAPSULE HOODIE",
   price: "4 600₽",
   isLongImg: false,
@@ -22,6 +25,7 @@ const capsuleHoodie = {
 };
 const capsuleTee1 = {
   img: "./imgs/index/CapsuleTee1.png",
+  bigImg: "./imgs/HQItems/ww tee.png",
   name: "WW CAPSULE 'CHEAP' TEE",
   price: "1 720₽",
   isLongImg: false,
@@ -29,6 +33,7 @@ const capsuleTee1 = {
 };
 const capsuleTee2 = {
   img: "./imgs/index/CapsuleTee2.png",
+  bigImg: "./imgs/HQItems/vasya tee.png",
   name: "WW CAPSULE 'VASILY' TEE",
   price: "2 200₽",
   isLongImg: false,
@@ -36,6 +41,7 @@ const capsuleTee2 = {
 };
 const capsulePants = {
   img: "./imgs/index/CapsulePants.png",
+  bigImg: "./imgs/HQItems/ww pants.png",
   name: "WW CAPSULE PANTS",
   price: "4 600₽",
   isLongImg: true,
@@ -43,6 +49,7 @@ const capsulePants = {
 };
 const lastTee1 = {
   img: "./imgs/index/section5tee1.png",
+  bigImg: "./imgs/HQItems/tee.png",
   name: "SIKKBODY TEE WHITE",
   price: "2 000₽",
   isLongImg: false,
@@ -50,6 +57,7 @@ const lastTee1 = {
 };
 const lastTee2 = {
   img: "./imgs/index/section5tee2.png",
+  bigImg: "./imgs/HQItems/sex a lot tee.png",
   name: "COSTS A LOT TEE",
   price: "2 190₽",
   isLongImg: false,
@@ -58,6 +66,7 @@ const lastTee2 = {
 const collection = [
   {
     img: "./imgs/index/coll1.png",
+    bigImg: "./imgs/HQItems/sheezy hood.png",
     name: "COVID LOGO HOODIE",
     price: "5 590₽",
     oldPrice: "6 700₽",
@@ -66,6 +75,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll2.png",
+    bigImg: "./imgs/HQItems/social concept tee2.png",
     name: "SOCIAL HELP TEE",
     price: "1 190₽",
     oldPrice: "2 400₽",
@@ -74,6 +84,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll3.png",
+    bigImg: "./imgs/HQItems/social concept tee.png",
     name: "SOCIAL CONCEPT TEE",
     price: "1 190₽",
     oldPrice: "2 400₽",
@@ -82,6 +93,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll4.png",
+    bigImg: "./imgs/HQItems/social concept pants.png",
     name: "PANTS",
     price: "3 590₽",
     oldPrice: "4 400₽",
@@ -90,6 +102,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll5.png",
+    bigImg: "./imgs/HQItems/maskblack ww 2.png",
     name: "EARFLAP MASK",
     price: "3 590₽",
     oldPrice: "4 000₽",
@@ -98,6 +111,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll6.png",
+    bigImg: "./imgs/HQItems/kaporblack ww.png",
     name: "HOOD",
     price: "2 890₽",
     oldPrice: "3 500₽",
@@ -106,6 +120,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll7.png",
+    bigImg: "./imgs/HQItems/rukava red ww.png",
     name: "SLEEVES",
     price: "1 390₽",
     oldPrice: "1 700₽",
@@ -114,6 +129,7 @@ const collection = [
   },
   {
     img: "./imgs/index/coll8.png",
+    bigImg: "./imgs/HQItems/scarfblack ww.png",
     name: "SCARF",
     price: "3 590₽",
     oldPrice: "4 400₽",
@@ -196,7 +212,7 @@ function openProduct(product) {
   document.body.classList.add("overHide");
   document.getElementById("productName").innerHTML = product.name;
   document.getElementById("productPriceNumber").innerHTML = product.price;
-  document.getElementById("productImg").setAttribute("src", product.img);
+  document.getElementById("productImg").setAttribute("src", product.bigImg);
   document.getElementById("addProduct").remove();
   const btn = document.createElement("button");
   btn.setAttribute("id", "addProduct");
