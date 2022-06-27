@@ -589,6 +589,7 @@ footer .info {
     height: 16px;
     border: none;
     background-color: transparent;
+    background: url("../imgs/index/btnCross.png");
     position: absolute;
     top: 0;
     right: 5px;
