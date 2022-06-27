@@ -1,6 +1,7 @@
 const acces = [
   {
     img: "./imgs/visuallyImpaired/acc1.png",
+    bigImg: "./imgs/HQItems/scarfblack ww.png",
     name: "SCARF",
     price: "3 590₽",
     isLongImg: false,
@@ -8,6 +9,7 @@ const acces = [
   },
   {
     img: "./imgs/visuallyImpaired/acc2.png",
+    bigImg: "./imgs/HQItems/kaporblack ww.png",
     name: "HOOD",
     price: "2 890₽",
     isLongImg: true,
@@ -15,6 +17,7 @@ const acces = [
   },
   {
     img: "./imgs/visuallyImpaired/acc3.png",
+    bigImg: "./imgs/HQItems/maskblack2.png",
     name: "EARFLAP MASK BLACK HOLE",
     price: "3 590₽",
     isLongImg: true,
@@ -22,6 +25,7 @@ const acces = [
   },
   {
     img: "./imgs/visuallyImpaired/acc4.png",
+    bigImg: "./imgs/HQItems/rukava red ww.png",
     name: "SLEEVES",
     price: "3 590₽",
     isLongImg: true,
@@ -30,7 +34,8 @@ const acces = [
 ];
 const hoodies = [
   {
-    img: "./imgs/visuallyImpaired/hood1.png",
+    img: "./imgs/index/CapsuleHoodie.png",
+    bigImg: "./imgs/HQItems/hood ww.png",
     name: "WW CAPSULE HOODIE",
     price: "4 600₽",
     isLongImg: false,
@@ -38,6 +43,7 @@ const hoodies = [
   },
   {
     img: "./imgs/visuallyImpaired/hood2.png",
+    bigImg: "./imgs/HQItems/mom elly hood.png",
     name: "HOLD MY HAND CREWNECK",
     price: "4 600₽",
     isLongImg: true,
@@ -45,6 +51,7 @@ const hoodies = [
   },
   {
     img: "./imgs/visuallyImpaired/hood3.png",
+    bigImg: "./imgs/HQItems/sheezy hood.png",
     name: "COVID LOGO HOODIE",
     price: "5 590₽",
     isLongImg: true,
@@ -54,6 +61,7 @@ const hoodies = [
 const pants = [
   {
     img: "./imgs/visuallyImpaired/pants1.png",
+    bigImg: "./imgs/HQItems/ww pants.png",
     name: "CAPSULE PANTS",
     price: "4 600₽",
     isLongImg: false,
@@ -61,6 +69,7 @@ const pants = [
   },
   {
     img: "./imgs/visuallyImpaired/pants2.png",
+    bigImg: "./imgs/HQItems/mom elly pants.png",
     name: "PANTS MOM ELLY",
     price: "6 590₽",
     isLongImg: true,
@@ -68,6 +77,7 @@ const pants = [
   },
   {
     img: "./imgs/visuallyImpaired/pants3.png",
+    bigImg: "./imgs/HQItems/social concept pants.png",
     name: "PANTS RED BLOOD",
     price: "3 590₽",
     isLongImg: true,
@@ -77,6 +87,7 @@ const pants = [
 const tees = [
   {
     img: "./imgs/visuallyImpaired/tee1.png",
+    bigImg: "./imgs/HQItems/mom elly tee.png",
     name: "MOM ELLY TEE",
     price: "2 490₽",
     isLongImg: false,
@@ -84,6 +95,7 @@ const tees = [
   },
   {
     img: "./imgs/visuallyImpaired/tee2.png",
+    bigImg: "./imgs/HQItems/social concept tee2.png",
     name: "SOCIAL HELP TEE",
     price: "1 990₽",
     isLongImg: false,
@@ -91,6 +103,7 @@ const tees = [
   },
   {
     img: "./imgs/visuallyImpaired/tee3.png",
+    bigImg: "./imgs/HQItems/vasya tee.png",
     name: "WW CAPSULE 'VASILY' TEE",
     price: "2 200₽",
     isLongImg: false,
@@ -98,6 +111,7 @@ const tees = [
   },
   {
     img: "./imgs/visuallyImpaired/tee4.png",
+    bigImg: "./imgs/HQItems/social concept tee.png",
     name: "SOCIAL CONCEPT TEE",
     price: "1 990₽",
     isLongImg: false,
@@ -105,6 +119,7 @@ const tees = [
   },
   {
     img: "./imgs/visuallyImpaired/tee5.png",
+    bigImg: "./imgs/HQItems/sex a lot tee.png",
     name: "COSTS A LOT TEE",
     price: "2 190₽",
     isLongImg: false,
@@ -112,6 +127,7 @@ const tees = [
   },
   {
     img: "./imgs/visuallyImpaired/tee6.png",
+    bigImg: "./imgs/HQItems/tee.png",
     name: "SIKKBODY TEE WHITE",
     price: "2 000₽",
     isLongImg: false,
@@ -119,6 +135,7 @@ const tees = [
   },
   {
     img: "./imgs/visuallyImpaired/tee7.png",
+    bigImg: "./imgs/HQItems/ww tee.png",
     name: "WW CAPSULE 'CHEAP' TEE",
     price: "1 720₽",
     isLongImg: false,
@@ -220,7 +237,7 @@ function openProduct(item) {
   document.getElementById('hoodiePage').classList.add('hidden');
   document.getElementById('wrapperProduct').classList.remove('hidden');
   document.getElementById('bucketWindow').classList.add('hidden');
-  document.getElementById('productImg').setAttribute('src', item.img);
+  document.getElementById('productImg').setAttribute('src', item.bigImg);
   document.getElementById('productName').innerHTML = item.name;
   document.getElementById('productPrice').innerHTML = item.price;
   document.getElementById('addProduct').remove();
